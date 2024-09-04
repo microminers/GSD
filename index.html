@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link rel="icon" href="images/favicon.ico">
+
+    <script src="https://kit.fontawesome.com/d5622e0592.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gun shot detection system </title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!DOCTYPE html>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+</head>
+
+<body>
+ <a href="#header" class="top-btn"> <i class="fa-solid fa-up-long"></i></a> 
+    <div id="header">
+        <video autoplay muted loop id="myVideo">
+            <source src="intro.webm" type="video/mp4">
+        </video>
+        <div class="container-1">
+           
+            <nav> 
+                <div class="logo"><a href="#header"> Microminers</a></div>
+                <ul id="sidemenu"> 
+                    <li><a href="#header"> Home </a></li>
+                    <li><a href="#GPS-map"> GPS map </a></li>
+                    <li><a href="#log-events"> Log Events </a></li>
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#contact"> Contact us </a></li>
+                    <i class="fa-solid fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+    </div>
+     
+<div class="intro"> 
+    <h1 class="auto-type-1"> Introducing<br><span class="auto-type"></span></h1>
+</div>
+</div>
+    
+    <div id="GPS-map">
+        <div class="container-2">
+            <h1 style="padding:0px 25px 25px 0px; font-size: 35px;font-family:'Verdana';font-weight: bold;color: #fff;"> GPS Map </h1>
+            <div class="row">
+                <div class="about-col-1">
+                   <div  class="maps" id="map"></div>
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> How it works? </h1>
+                    <p class="descript">The system detects gunshots, identifies the specific location of the gunfire, and transmits the information to a small number of 
+                        selected recipients in real time. The drone is outfitted with omnidirectional microphones placed at strategic positions to obtain 
+                        the sound signal from all directions. After detecting a gunshot, it triangulates the gunshot source with the time difference of 
+                        arrival (TDOA) of sound collected by each microphone. Once it locates thegunshot, the drone can use GPS to identify the location of the incident with great precision and provide this information on the map interface.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+   
+<div id="log-events">
+    <div class="container">
+        <h1> Log events </h1>
+    </div>
+</div>
+    <!--------------------about ------------------------------->
+    <div id="about">
+        <div class="container">
+            <h1 class="sub-title-2"> About  </h1>
+            <div class="about-list">
+                <div>
+                  
+                    <h2> Hardware  </h2>
+                    <p> 
+                    </p>
+       
+                </div>   
+                <div>
+                 
+                    <h2> Software  </h2>
+                    <p> 
+                    </p>
+                    <a href="#">   </a>
+                </div>   
+                <div>
+             
+                    <h2> </h2>
+                    <p> 
+                    </p>
+                    <a href="#"> </a>
+                </div>   
+            </div>
+        </div>
+    </div> 
+    
+    <div id="contact">
+        <div class="container">
+            <h1> Contact us </h1>
+        </div>
+    </div>
+    <div class="copyright">
+        <p> &#169 2024.Microminers.All rights reserved </p>
+    </div>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!---------------------back-to-top---------------->
+<Script>
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        sidemenu.style.right = "0";
+    }
+    function closemenu() {
+        sidemenu.style.right = "-300px";
+    }
+
+</script>
+
+<script>
+    const toTop = document.querySelector(".top-btn");
+
+    window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+})
+</script>
+
+
+
+
+
+
+    <!--------------------------Javascript-------------------->
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([0, 0], 13);
+
+        // Add a tile layer to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Initialize a marker for the user's location
+        var userMarker = L.marker([0, 0]).addTo(map)
+            .bindPopup('Gun shot detected')
+            .openPopup();
+
+        // Function to update the user's location
+        function updateLocation(position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            // Update the map view
+            map.setView([lat, lng], 13);
+
+            // Update the marker position
+            userMarker.setLatLng([lat, lng])
+                .bindPopup('Gun shot detected<br>Lat: ' + lat + '<br>Lng: ' + lng)
+                .openPopup();
+        }
+
+        // Function to handle errors
+        function handleError(error) {
+            console.error('Error getting location:', error);
+            alert('Error getting location: ' + error.message);
+        }
+
+        // Request the user's location
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(updateLocation, handleError, {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            });
+        } else {
+            alert('Geolocation is not supported by this browser.');
+        }
+    </script>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script> var typed = new Typed(".auto-type",{
+    strings: ["Gun shot detection system", "Integrated with drone"],
+    typeSpeed:100,
+    backSpeed:100,
+    loop:true
+})
+</script>
+
+</body>
+
+</html>
