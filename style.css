@@ -239,7 +239,9 @@ nav .fa-solid {
 #maps .default-card{
     display: none;
 }
- 
+#map > div.leaflet-control-container > div.leaflet-bottom.leaflet-right > div{
+    display none;
+}
 .about-col-2 .descript{
    
    
