@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+
+
+
 
     <link rel="icon" href="images/favicon.ico">
 
@@ -39,6 +46,13 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="intro"> 
+            <div class="trademark"><a href="#header"><img src="MICROMINERS full logo.jpg"></a></div>
+            <h1 class="auto-type-1"> Introducing </h1>
+            <h2 class="auto-type"> Gun shot detection system <br> Integrated with drone</h2>
+        </div>
+    </div>
 
  <a href="#header" class="top-btn"> <i class="fa-solid fa-up-long"></i></a> 
     <div id="header">
@@ -46,9 +60,8 @@
             <source src="intro.webm" type="video/mp4">
         </video>
         <div class="container-1">
-           
             <nav> 
-                <div class="logo"><a href="#header"><img src="MICROMINERS logo.jpg" style="display: flex;width: 50px;height: auto;border-radius:50px;  filter: drop-shadow(1px 1px 1px rgb(233, 51, 51)) ;"><p>Microminers</p></a></div>
+                <div class="logo"><a href="#header"><img src="MICROMINERS logo.jpg" style="display: flex;width: 50px;height: auto;border-radius:50px;  filter: drop-shadow(1px 2px 1px rgb(233, 51, 51)) ;"><p>Microminers</p></a></div>
                 <ul id="sidemenu"> 
                     <li><a href="#header"> Home </a></li>
                     <li><a href="#GPS-map"> GPS map </a></li>
@@ -59,16 +72,14 @@
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
+    </div> 
+    <div class="history">
+        Detected Guns 
     </div>
-     
-<div class="intro"> 
-    <h1 class="auto-type-1"> Introducing<br><span class="auto-type"></span></h1>
-    <div class="guns">
-       Detected GUNS
+    <div class="gps">
+        Events log
     </div>
 </div>
-</div>
-    
     <div id="GPS-map">
         <div class="container-2">
             <h1 style="padding:0px 25px 25px 0px; font-size: 35px;font-family:'Verdana';font-weight: bold;color: #fff;"> GPS Map </h1>
@@ -120,6 +131,12 @@
     <div id="contact">
         <div class="container">
             <h1> Contact us </h1>
+            <div class="icons">
+            <i class="fa-brands fa-linkedin"></i></a>
+            <a class="icons" href="https://github.com/microminers/" target="blank"><i class="fa-brands fa-github"></i></a>
+            <a class="icons" href="https://www.instagram.com/micro_miners" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
         </div>
     </div>
     <div class="copyright">
@@ -222,14 +239,29 @@
     </script>
 
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-<script> var typed = new Typed(".auto-type",{
-    strings: ["Gun shot detection system", "Integrated with drone"],
-    typeSpeed:100,
-    backSpeed:100,
-    loop:true
-})
-</script>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const loader = document.querySelector(".loader");
+        setTimeout(() => {
+            loader.classList.add("loader-hidden");
+        }, 3000);  
+    });
+
+</script>
+<script>window.addEventListener("load", function() {
+    document.querySelector(".trademark img").classList.add("show");
+});
+
+</script>
+<script>window.addEventListener("load", function() {
+    document.querySelector(".auto-type-1").classList.add("show");
+});
+</script>
+<script>window.addEventListener("load", function() {
+    document.querySelector(".auto-type").classList.add("show");
+});
+</script>
 </body>
 
 </html>
